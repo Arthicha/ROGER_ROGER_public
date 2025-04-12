@@ -1,6 +1,6 @@
 # ROGER: Reward-Oriented Gains via Embodied Regulation
 # Arthicha Srisuchinnawong, RSS 2025
-# example code: locomotion learning of a quadruped robot
+# minimalistic example code: locomotion learning of a quadruped robot
 # update 12 April 2025
 
 # ------------------- import modules ---------------------
