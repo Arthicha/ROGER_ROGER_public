@@ -22,7 +22,7 @@ Existing robot locomotion learning techniques rely heavily on the offline select
 	- numpy 1.22.4
 	- pytorch 2.0.1+cu118
 	- mujoco_py 2.1.2.14
-	- gymnasijum 0.29.1
+	- gymnasium 0.29.1
  
 # Running
 
