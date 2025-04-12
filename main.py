@@ -34,13 +34,13 @@ NREPLAY = 8 # replay length (#episode)
 NTIMESTEP = 80 # timestep per episode, (default: 70-80 approx, 3-4 gait cycles)
 T0 = 40 # soft start timestep (default: 0.5*NTIMESTEP)
 NREWARD = 3 # reward channels (reward, constraint1, constraint2, ...)
-NEPISODE = 1000 # number of episode to run
+NEPISODE = 300 # number of episode to run
 HORIZON = 20 # horizon for computing return (default: 20 for SME's w_time = 0.18, approx. 1 gait cycle)
 EPS = 1e-6
 
 FRAMEWIDTH = 400
 FRAMEHEIGHT = 400
-RENDER = False
+RENDER = True
 CONNECTION = torch.FloatTensor(np.array([[0,1,0,0],[0,0,1,0],[0,0,0,1],[1,0,0,0]])).cuda()
 
 # ------------------- auxiliary functions ---------------------

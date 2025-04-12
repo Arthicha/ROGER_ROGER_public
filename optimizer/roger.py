@@ -24,7 +24,7 @@ class ROGER():
 		self.ksigma = ksigma
 
 		# roger roger
-		self.scream = scream
+		self.screamflag = scream
 		self.wave_obj = sa.WaveObject.from_wave_file("optimizer/roger.wav")
 
 
@@ -53,7 +53,7 @@ class ROGER():
 			lambdas[:,:,:,[0]] = 1-deltas
 
 			# roger roger
-			if self.scream:
+			if self.screamflag:
 				self.scream()
 
 			return lambdas
