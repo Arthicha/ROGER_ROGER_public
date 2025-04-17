@@ -14,7 +14,7 @@ import simpleaudio as sa
 EPS = 1e-6
 
 # ------------------- class Reward-0riented Gains via Embodied Regulation  ---------------------
-class ROGER():
+class ROGER:
 
 	# -------------------- constructor -----------------------
 	def __init__(self,threshold, ksigma = 3, scream=True):
@@ -29,13 +29,13 @@ class ROGER():
 
 
 	
-	def compute_gains(self, rewards, predicted_rewards):
+	def compute_gains(self, rewards, predicted_rewards,reducedims=[0]):
 		# rewards & predicted rewards -> (#batch, #timestep, 1, #channel)
 		
 		with torch.no_grad():
 			# compute constraint estimate
 			mu = predicted_rewards[:,:,:,1:]
-			sd = torch.mean((rewards[:,:,:,1:]-mu).pow(2),dim=(0),keepdim=True).sqrt()
+			sd = torch.mean((rewards[:,:,:,1:]-mu).pow(2),dim=reducedims,keepdim=True).sqrt()
 			const_estimate = torch.clamp(mu - self.ksigma*sd,None,0.0)
 			
 			# compute proximities

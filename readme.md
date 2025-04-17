@@ -26,9 +26,10 @@ Existing robot locomotion learning techniques rely heavily on the offline select
  
 # Running
 
-Use the following command to run example code (locomotion learning of a quadruped robot).
+## Quadruped Robot Locomotion Learning
+Use the following command to run example code.
 ```
-python main.py
+python quadruped_learning.py
 ```
 
 If you want to try different hyperparameter values, you can modify them according to the table below.
@@ -44,6 +45,14 @@ If you want to try different hyperparameter values, you can modify them accordin
 |  | NEPISODE | number of episode used for learning | 
 
 Enjoy! With a proper set of hyperparameters, the robot should start walking within the first 70 episodes.
+
+## MuJoCo Continuous Locomotion Learning
+Use the following command to run example code. If you want to try different hyperparameter values, you can modify them in "config.ini".
+```
+python mujoco_learning.py
+```
+
+Enjoy! With a proper set of hyperparameters, the robot should start walking within the first 200 epochs.
 
 # Note
 Implementation of ROGER is available at optimizer/roger.py.
