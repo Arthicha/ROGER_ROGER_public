@@ -150,9 +150,10 @@ for n in range(args.epochs):
 	# update state normalization
 	state_rms.update(np.vstack(state_list))
 
-	score[1:] /= survive_time
-	score_list.append(deepcopy(score))
-	distance_list.append(info['x_position'])
+	if not done:
+		score[1:] /= survive_time
+		score_list.append(deepcopy(score))
+		distance_list.append(info['x_position'])
 
 	# print epoch info
 	print('----------------- epoch : ' +str(n)+' --------------------------')
