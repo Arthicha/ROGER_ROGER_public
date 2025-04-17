@@ -37,7 +37,7 @@ parser.add_argument("--env_name", type=str, default = 'Hopper-v3', help = "'Ant-
 		  'InvertedDoublePendulum-v2', 'InvertedPendulum-v2' (default : Hopper-v2)")
 parser.add_argument("--algo", type=str, default = 'ppo', help = 'algorithm to adjust (default : ppo)')
 parser.add_argument('--train', type=bool, default=True, help="(default: True)")
-parser.add_argument('--render', type=bool, default=False, help="(default: False)")
+parser.add_argument('--render', type=bool, default=True, help="(default: False)")
 parser.add_argument('--epochs', type=int, default=1000, help='number of epochs, (default: 1000)')
 parser.add_argument("--use_cuda", type=bool, default = True, help = 'cuda usage(default : True)')
 parser.add_argument("--reward_scaling", type=float, default = 0.1, help = 'reward scaling(default : 0.1)')

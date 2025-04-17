@@ -45,7 +45,7 @@ class PPO(nn.Module):
 		self.critic_optimizer = optim.Adam(self.critic.parameters(), lr=self.args.critic_lr)
 
 		# ROGER
-		self.roger = ROGER(threshold=constrain_ths, ksigma = 3, scream=False)
+		self.roger = ROGER(threshold=constrain_ths, ksigma = 3)
 	
 	# get gaussian policy
 	def get_action(self,x): 
