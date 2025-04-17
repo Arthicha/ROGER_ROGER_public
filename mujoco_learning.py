@@ -150,6 +150,7 @@ for n in range(args.epochs):
 	# update state normalization
 	state_rms.update(np.vstack(state_list))
 
+	# append score and distance only if never have appended it (not done)
 	if not done:
 		score[1:] /= survive_time
 		score_list.append(deepcopy(score))
